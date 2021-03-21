@@ -40,7 +40,6 @@ input:focus {
 .search input {
   width: 50%;
   padding: 0.625em;
-  /* margin: 3px; */
 }
 
 .image-of-day {
@@ -48,6 +47,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
 }
+
 .image-of-day img {
   width: 90%;
   height: 80vh;
@@ -58,6 +58,24 @@ input:focus {
   width: 80%;
   text-align: justify;
 }
+
+@media (max-width: 400px) {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 860px) {
+  .image-of-day img {
+    max-width: 1028px;
+  }
+  .image-of-day p {
+    max-width: 1000px;
+  }
+}
+
 .copyright {
   width: 80%;
   display: flex;

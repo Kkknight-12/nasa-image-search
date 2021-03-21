@@ -12,13 +12,13 @@ const Search = () => {
         const imageOfDay = async() => {
             const { data } = await axios.get(`https://api.nasa.gov/planetary/apod?`,{
                 params: {
-                    api_key: "RTyB7Yldxv5muDjoQdyXNMT8yLCXMBsi2jZWD8u9",
+                    api_key: "USE_YOUR_API_KEY_HERE",
                 }
             })
             setImage(data)
         }
         imageOfDay()
-    },[term])
+    },[term])/*  */
 
     useEffect( () => {
         const timerId = setTimeout( () => {
@@ -48,10 +48,7 @@ const Search = () => {
         let date = result.data[0].date_created
         date = new Date(date).toDateString()
         const title = result.data[0].title
-        // const keywords = result.data[0].keywords
 
-        // console.log(result.links[0].href)
-        // console.log(result.data[0].date_created)
         return(
             <div key={index} className="search-img">
                 <img src={href} alt=""/>
